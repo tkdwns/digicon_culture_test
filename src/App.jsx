@@ -6,11 +6,21 @@ import DetailPage from './pages/DetailPage'; // 1. 상세페이지 가져오기
 
 function App() {
   return (
-    <BrowserRouter>
+
+    // 메인
+    /*<BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/map" element={<MapPage />} />
-        {/* 2. 주소창 뒤에 어떤 ID 숫자가 붙어도 DetailPage 컴포넌트 하나가 전부 처리함 */}
+        <Route path="/detail/:id" element={<DetailPage />} />
+      </Routes>
+    </BrowserRouter>*/
+
+     // 깃허브 업데이트 용
+     <BrowserRouter basename="/digicon_culture_test">
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/map" element={<MapPage />} />
         <Route path="/detail/:id" element={<DetailPage />} />
       </Routes>
     </BrowserRouter>
